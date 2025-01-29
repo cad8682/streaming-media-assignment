@@ -72,13 +72,13 @@ TypeError [ERR_INVALID_ARG_TYPE]: The "chunk" argument must be of type string or
 */
 
 const getParty = (request, response) => {
-    loadFile(request, response, '../cient/party.mp4', 'video/mp4');
+    loadFile(request, response, '../client/party.mp4', 'video/mp4');
 };
 const getBling = (request, response) => {
-    loadFile(request, response, '../cient/bling.mp3', 'audio/mpeg');
+    loadFile(request, response, '../client/bling.mp3', 'audio/mpeg');
 };
 const getBird = (request, response) => {
-    loadFile(request, response, '../cient/bird.mp4', 'video/mp4');
+    loadFile(request, response, '../client/bird.mp4', 'video/mp4');
 };
 
 const loadFile = (request, response, mediaPath, contentType) => {
@@ -89,7 +89,7 @@ const loadFile = (request, response, mediaPath, contentType) => {
             if (err.code === 'ENOENT') {
                 response.writeHead(404);
             }
-            return response.end(err);
+            return response.end();
         }
 
         let { range } = request.headers;
