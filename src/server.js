@@ -8,18 +8,19 @@ const onRequest = (request, response) => {
     console.log(request.url);
 
     switch(request.url) {
-        case '/':
-            htmlHandler.getIndex(request, response);
-            break;
+        case '/party':
         case '/party.mp4':
             mediaHandler.getParty(request, response);
             break;
+        case '/bling':
         case '/bling.mp3':
             mediaHandler.getBling(request, response);
             break;
+        case '/bird':
         case '/bird.mp4':
             mediaHandler.getBird(request, response);
             break;
+        case '/':
         default:
             htmlHandler.getIndex(request, response);
             break;
