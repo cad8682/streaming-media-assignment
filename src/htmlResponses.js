@@ -23,5 +23,5 @@ const getPage3 = (request, response) => {
 };
 
 module.exports.getIndex = getIndex;
-module.exports.getIndex = getPage2;
-module.exports.getIndex = getPage3;
+module.exports.getPage2 = getPage2;
+module.exports.getPage3 = getPage3;
